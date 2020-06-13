@@ -1,7 +1,14 @@
 import React from 'react';
 
 const Tile: (props: any) => JSX.Element = (props) => {
-  return <div className="tile">City: {props.weatherTiles.name}</div>;
+  const tiles = props.weatherTiles;
+  return (
+    <>
+      {tiles.city} <br />
+      {tiles.temperature} <br />
+      {tiles.country}
+    </>
+  );
 };
 
 export default Tile;
