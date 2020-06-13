@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios, { AxiosResponse } from 'axios';
+import './search-component.scss';
 
 const API_KEY: string = '37d4f7e37e1265a47543c5014f2be65c';
 
@@ -21,7 +22,7 @@ const Search: (props: any) => JSX.Element = (props) => {
   };
 
   return (
-    <div className="search-component">
+    <div className="search">
       <label htmlFor="">Search for weather forecast in your city!</label>
       <br />
       <input
