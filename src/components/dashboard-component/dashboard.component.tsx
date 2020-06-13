@@ -1,14 +1,7 @@
-import React from 'react';
-import Form from '../form/form.component';
-import Tile from '../tile-component/tile.component';
+import React, { useEffect } from 'react';
 
 const Dashboard = () => {
-  return (
-    <div>
-      <Form />
-      <Tile />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Dashboard;

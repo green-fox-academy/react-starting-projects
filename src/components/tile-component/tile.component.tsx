@@ -1,12 +1,7 @@
 import React from 'react';
 
-export const Tile = () => {
-  return (
-    <div>
-      <p>Seattle</p>
-      <p>Washington, United States</p>
-    </div>
-  );
+const Tile = (props: any) => {
+  return <div className="tile"></div>;
 };
 
 export default Tile;
