@@ -1,3 +1,11 @@
 .tiles {
   text-align: center;
+  background: whitesmoke;
+  width: 20%;
+  margin-left: 42.5%;
+  border-radius: 5px;
+  padding: 5px;
 }
+
+/* note to self:
+width 20% because 100% html length - 2 x margin-left(2 x 40%) = 20% */

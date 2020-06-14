@@ -5,25 +5,27 @@ import './search-component.scss';
 const API_KEY: string = '37d4f7e37e1265a47543c5014f2be65c';
 
 const Search: (props: any) => JSX.Element = (props) => {
-  const [searchInput, setSearchInput] = useState('');
+  const [searchInput, setSearchInput] = useState<string>('');
 
   const fetchData: () => Promise<void> = async () => {
-    const response: AxiosResponse<any> = await axios.get(
+    const response: AxiosResponse = await axios.get(
       `https://api.openweathermap.org/data/2.5/weather?q=${searchInput}&units=metric&appid=${API_KEY}`
     );
     console.log('Response:', response.data);
     console.log(`Temperature: ${response.data.main.temp}°C`);
     console.log('City:', response.data.name);
     await props.weatherInfo({
-      city: response.data.name,
-      country: response.data.sys.country,
-      temperature: `${response.data.main.temp} °C`,
+      city: response.data.name as string,
+      country: response.data.sys.country as string,
+      temperature: `${response.data.main.temp} °C` as string,
     });
   };
 
   return (
     <div className="search">
-      <label htmlFor="">Search for weather forecast in your city!</label>
+      <label htmlFor="search-message">
+        Search for weather forecast in your city!
+      </label>
       <br />
       <input
         type="text"

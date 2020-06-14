@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Dashboard from './components/dashboard-component/dashboard.component';
 
-function App() {
+function App(): JSX.Element {
   return (
     <div className="App">
       <Dashboard />
