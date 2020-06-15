@@ -1,5 +1,5 @@
 import React from 'react';
-import './invalid-route.component.scss';
+import './invalid-route.styles.scss';
 import { useHistory } from 'react-router-dom';
 import { History } from 'history';
 
@@ -10,7 +10,7 @@ const InvalidRoute: () => JSX.Element = () => {
   return (
     <div className="invalid-route">
       <div className="dashboard-route" onClick={navigateTo}>
-        Not a valid route, click to return to the Dashboard!
+        Not a valid route, click here to return to the Dashboard!
       </div>
     </div>
   );

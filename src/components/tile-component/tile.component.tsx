@@ -1,6 +1,5 @@
 import React from 'react';
-
-import './tile.component.scss';
+import './tile.styles.scss';
 
 const Tile: (props: any) => JSX.Element = (props) => {
   const tiles: any = props.weatherTiles;

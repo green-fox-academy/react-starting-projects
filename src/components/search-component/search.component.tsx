@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios, { AxiosResponse } from 'axios';
-import './search-component.scss';
+import './search.styles.scss';
 
 const API_KEY: string = '37d4f7e37e1265a47543c5014f2be65c';
 
@@ -31,7 +31,8 @@ const Search: (props: any) => JSX.Element = (props) => {
         </label>
         <br />
         <input
-          type="text"
+          className="form__field"
+          type="input"
           required
           placeholder="City..."
           value={searchInput}

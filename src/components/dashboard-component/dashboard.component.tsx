@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './dashboard.component.scss';
+import './dashboard.styles.scss';
 import Search from '../search-component/search.component';
 import Tile from '../tile-component/tile.component';
 
