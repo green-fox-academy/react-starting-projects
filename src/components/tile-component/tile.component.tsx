@@ -15,9 +15,3 @@ const Tile: (props: any) => JSX.Element = (props) => {
 };
 
 export default Tile;
-
-// {remaining === 0 ? (
-//   <span className="product-sold-out">Sold Out</span>
-// ) : (
-//   <span className="product-remaining">{remaining} remaining</span>
-// )}

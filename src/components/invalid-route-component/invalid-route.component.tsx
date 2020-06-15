@@ -1,9 +1,17 @@
 import React from 'react';
+import './invalid-route.component.scss';
+import { useHistory } from 'react-router-dom';
+import { History } from 'history';
 
 const InvalidRoute: () => JSX.Element = () => {
+  const history: History<History.PoorMansUnknown> = useHistory();
+  const navigateTo: () => void = () => history.push('/dashboard');
+
   return (
-    <div>
-      <p>Not a valid route, click to return to the Dashboard!</p>
+    <div className="invalid-route">
+      <div className="dashboard-route" onClick={navigateTo}>
+        Not a valid route, click to return to the Dashboard!
+      </div>
     </div>
   );
 };

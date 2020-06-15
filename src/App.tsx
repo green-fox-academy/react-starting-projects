@@ -10,7 +10,7 @@ function App(): JSX.Element {
       <Switch>
         <Route exact path="/" component={Dashboard}></Route>
         <Route exact path="/dashboard" component={Dashboard}></Route>
-        <Route exact path="*" component={InvalidRoute}></Route>
+        <Route path="*" component={InvalidRoute}></Route>
       </Switch>
     </div>
   );
