@@ -23,19 +23,24 @@ const Search: (props: any) => JSX.Element = (props) => {
 
   return (
     <div className="search">
-      <label htmlFor="search-message">
-        Search for weather forecast in your city!
-      </label>
-      <br />
-      <input
-        type="text"
-        placeholder="City..."
-        value={searchInput}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setSearchInput(e.target.value)
-        }
-      />
-      <button onClick={fetchData}>Search</button>
+      <form
+        onSubmit={(e: React.FormEvent<HTMLFormElement>) => e.preventDefault()}
+      >
+        <label htmlFor="search-message">
+          Search for weather forecast in your city!
+        </label>
+        <br />
+        <input
+          type="text"
+          required
+          placeholder="City..."
+          value={searchInput}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setSearchInput(e.target.value)
+          }
+        />
+        <button onClick={fetchData}>Search</button>
+      </form>
     </div>
   );
 };

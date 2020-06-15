@@ -9,7 +9,7 @@ const Dashboard: () => JSX.Element = () => {
   return (
     <div className="dashboard">
       <Search weatherInfo={getWeather} />
-      {weather && <Tile weatherTiles={weather} />}
+      {getWeather && <Tile weatherTiles={weather} />}
     </div>
   );
 };
