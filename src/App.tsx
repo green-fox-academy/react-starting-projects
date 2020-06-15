@@ -1,12 +1,17 @@
 import React from 'react';
 import './App.css';
 import Dashboard from './components/dashboard-component/dashboard.component';
-import { Route } from 'react-router-dom';
+import InvalidRoute from './components/invalid-route-component/invalid-route.component';
+import { Route, Switch } from 'react-router-dom';
+
 function App(): JSX.Element {
   return (
     <div className="App">
-      <Route exact path="/" component={Dashboard} />
-      <Route exact path="/dashboard" component={Dashboard} />
+      <Switch>
+        <Route exact path="/" component={Dashboard}></Route>
+        <Route exact path="/dashboard" component={Dashboard}></Route>
+        <Route exact path="*" component={InvalidRoute}></Route>
+      </Switch>
     </div>
   );
 }
