@@ -6,9 +6,10 @@ const Tile: (props: any) => JSX.Element = (props) => {
 
   return (
     <div className="tiles">
-      {tiles.city} <br />
-      {tiles.temperature} <br />
+      <h3 className="city">{tiles.city}</h3>
+      <p className="country"></p>
       {tiles.country}
+      <h2 className="temperature">{tiles.temperature}</h2>
     </div>
   );
 };

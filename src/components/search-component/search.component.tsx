@@ -40,7 +40,9 @@ const Search: (props: any) => JSX.Element = (props) => {
             setSearchInput(e.target.value)
           }
         />
-        <button onClick={fetchData}>Search</button>
+        <button className="get-weather-button" onClick={fetchData}>
+          Search
+        </button>
       </form>
     </div>
   );
