@@ -10,6 +10,11 @@ const Tile: (props: any) => JSX.Element = (props) => {
       <p className="country"></p>
       {tiles.country}
       <h2 className="temperature">{tiles.temperature}</h2>
+      <img
+        className="weather-icon"
+        src={`http://openweathermap.org/img/wn/${tiles.icon}@2x.png`}
+        alt=""
+      />
     </div>
   );
 };

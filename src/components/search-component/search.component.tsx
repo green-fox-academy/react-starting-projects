@@ -14,10 +14,12 @@ const Search: (props: any) => JSX.Element = (props) => {
     console.log('Response:', response.data);
     console.log(`Temperature: ${response.data.main.temp}°C`);
     console.log('City:', response.data.name);
+    console.log('Icon:', response.data.weather[0].icon);
     await props.weatherInfo({
       city: response.data.name as string,
       country: response.data.sys.country as string,
       temperature: `${response.data.main.temp} °C` as string,
+      icon: response.data.weather[0].icon as string,
     });
   };
 
